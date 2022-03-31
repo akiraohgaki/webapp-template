@@ -51,10 +51,10 @@
     }
   },
   "tasks": {
-    "clear": "rm -rf public && mkdir public",
+    "clean": "rm -rf public && mkdir public",
     "bundle": "deno bundle src/main.ts public/main.bundle.js",
     "asset": "sh -c 'cp -a src/index.html src/assets public'",
     "test": "echo 'Skip test'",
-    "build": "deno fmt && deno lint && deno task clear && deno task bundle && deno task asset && deno task test"
+    "build": "deno fmt && deno lint && deno task clean && deno task bundle && deno task asset && deno task test"
   }
 }
