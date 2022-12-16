@@ -1,9 +1,12 @@
 {
+  "importMap": "import_map.json",
   "compilerOptions": {
     "lib": [
+      "deno.ns",
       "esnext",
       "dom",
-      "dom.iterable"
+      "dom.iterable",
+      "dom.asynciterable"
     ],
     "strict": true,
     "noUnusedLocals": true,
@@ -15,10 +18,8 @@
   "lint": {
     "files": {
       "include": [
-        "src/"
-      ],
-      "exclude": [
-        "src/data/"
+        "src/",
+        "tests/"
       ]
     },
     "rules": {
@@ -36,10 +37,8 @@
   "fmt": {
     "files": {
       "include": [
-        "src/"
-      ],
-      "exclude": [
-        "src/data/"
+        "src/",
+        "tests/"
       ]
     },
     "options": {
@@ -50,11 +49,15 @@
       "proseWrap": "preserve"
     }
   },
+  "test": {
+    "files": {
+      "include": [
+        "tests/"
+      ]
+    }
+  },
   "tasks": {
-    "clean": "rm -rf public && mkdir public",
     "bundle": "deno bundle src/main.ts public/main.bundle.js",
-    "asset": "sh -c 'cp -a src/index.html src/assets public'",
-    "test": "echo 'Skip test'",
-    "build": "deno fmt && deno lint && deno task clean && deno task bundle && deno task asset && deno task test"
+    "build": "deno fmt && deno lint && deno test && deno task bundle"
   }
 }
