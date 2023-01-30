@@ -19,7 +19,7 @@
     "files": {
       "include": [
         "src/",
-        "tests/"
+        "test/"
       ]
     },
     "rules": {
@@ -38,7 +38,7 @@
     "files": {
       "include": [
         "src/",
-        "tests/"
+        "test/"
       ]
     },
     "options": {
@@ -52,7 +52,7 @@
   "test": {
     "files": {
       "include": [
-        "tests/"
+        "test/"
       ]
     }
   },
