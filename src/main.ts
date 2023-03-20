@@ -1,1 +1,5 @@
-console.log('main');
+function main(): void {
+  console.log('main');
+}
+
+main();
