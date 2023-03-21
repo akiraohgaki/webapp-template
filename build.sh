@@ -10,7 +10,7 @@ if [ -d "${DST_DIR}" ]; then
   rm -rf "${DST_DIR}"
 fi
 
-mkdir "${DST_DIR}"
+mkdir -p "${DST_DIR}"
 
 for entry in "${INCLUDES[@]}"; do
   if [ -e "${SRC_DIR}/${entry}" ]; then
