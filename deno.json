@@ -18,7 +18,8 @@
   "lint": {
     "files": {
       "include": [
-        "src/"
+        "src/",
+        "bundle.ts"
       ]
     },
     "rules": {
@@ -36,7 +37,8 @@
   "fmt": {
     "files": {
       "include": [
-        "src/"
+        "src/",
+        "bundle.ts"
       ]
     },
     "options": {
@@ -55,7 +57,7 @@
     }
   },
   "tasks": {
-    "bundle": "deno bundle src/main.ts public/main.bundle.js",
+    "bundle": "deno run --allow-env --allow-read --allow-write --allow-net bundle.ts",
     "build": "deno fmt && deno lint && deno test && deno task bundle"
   }
 }
