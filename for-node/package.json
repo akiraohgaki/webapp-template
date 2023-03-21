@@ -1,0 +1,47 @@
+{
+  "name": "package-name",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Package description",
+  "author": "Author Name",
+  "license": "UNLICENSED",
+  "homepage": "https://example.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://example.com/repository"
+  },
+  "type": "module",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "fmt": "echo 'Skip code formatting'",
+    "lint": "tsc --noEmit && eslint --ext '.ts,.tsx,.js' src",
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest --ci --runInBand --passWithNoTests",
+    "bundle": "tsc && esbuild dist/main.js --outfile=public/main.bundle.js --bundle --minify",
+    "build": "npm run clean && npm run fmt && npm run lint && npm run test && npm run bundle"
+  },
+  "devDependencies": {
+    "@testing-library/react": "*",
+    "@types/jest": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "esbuild": "*",
+    "eslint": "*",
+    "eslint-plugin-react": "*",
+    "eslint-plugin-react-hooks": "*",
+    "jest": "*",
+    "jest-environment-jsdom": "*",
+    "jest-junit": "*",
+    "jest-mock": "*",
+    "prettier": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-router-dom": "*",
+    "recoil": "*",
+    "ts-jest": "*",
+    "typescript": "*"
+  }
+}
