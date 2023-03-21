@@ -18,8 +18,7 @@
   "lint": {
     "files": {
       "include": [
-        "src/",
-        "test/"
+        "src/"
       ]
     },
     "rules": {
@@ -37,8 +36,7 @@
   "fmt": {
     "files": {
       "include": [
-        "src/",
-        "test/"
+        "src/"
       ]
     },
     "options": {
@@ -52,7 +50,7 @@
   "test": {
     "files": {
       "include": [
-        "test/"
+        "src/"
       ]
     }
   },
