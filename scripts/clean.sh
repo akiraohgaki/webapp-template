@@ -9,6 +9,8 @@ fi
 
 mkdir -p "${DIST_DIR}"
 
-cp -a ${INCLUDES} "${DIST_DIR}"
+if [ "${INCLUDES}" ]; then
+  cp -a ${INCLUDES} "${DIST_DIR}"
+fi
 
 exit 0
