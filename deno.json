@@ -18,8 +18,7 @@
   "lint": {
     "files": {
       "include": [
-        "src/",
-        "bundle.ts"
+        "src/"
       ]
     },
     "rules": {
@@ -37,8 +36,7 @@
   "fmt": {
     "files": {
       "include": [
-        "src/",
-        "bundle.ts"
+        "src/"
       ]
     },
     "options": {
@@ -57,7 +55,8 @@
     }
   },
   "tasks": {
-    "bundle": "deno run --allow-env --allow-read --allow-write --allow-net bundle.ts",
-    "build": "deno fmt && deno lint && deno test && deno task bundle"
+    "clean": "sh scripts/clean.sh public 'src/*.html src/*.ico src/*.png src/assets'",
+    "bundle": "deno run --allow-env --allow-read --allow-write --allow-net scripts/bundle.ts src/main.ts public/main.bundle.js",
+    "build": "deno task clean && deno fmt && deno lint && deno test && deno task bundle"
   }
 }
