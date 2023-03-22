@@ -55,8 +55,8 @@
     }
   },
   "tasks": {
-    "clean": "sh scripts/clean.sh public 'src/*.html src/*.ico src/*.png src/assets'",
-    "bundle": "deno run --allow-env --allow-read --allow-write --allow-net scripts/bundle.ts src/main.ts public/main.bundle.js",
+    "clean": "curl -fsSL https://raw.githubusercontent.com/akiraohgaki/helper-script/main/remkdir.sh | sh -s -- public 'src/*.html src/*.ico src/*.png src/assets'",
+    "bundle": "deno run --allow-env --allow-read --allow-write --allow-net https://raw.githubusercontent.com/akiraohgaki/helper-script/main/deno-bundle.ts src/main.ts public/main.bundle.js",
     "build": "deno task clean && deno fmt && deno lint && deno test && deno task bundle"
   }
 }
