@@ -16,11 +16,9 @@
     "noFallthroughCasesInSwitch": true
   },
   "lint": {
-    "files": {
-      "include": [
-        "src/"
-      ]
-    },
+    "include": [
+      "src/"
+    ],
     "rules": {
       "tags": [
         "recommended"
@@ -34,25 +32,19 @@
     }
   },
   "fmt": {
-    "files": {
-      "include": [
-        "src/"
-      ]
-    },
-    "options": {
-      "useTabs": false,
-      "lineWidth": 120,
-      "indentWidth": 2,
-      "singleQuote": true,
-      "proseWrap": "preserve"
-    }
+    "include": [
+      "src/"
+    ],
+    "useTabs": false,
+    "lineWidth": 120,
+    "indentWidth": 2,
+    "singleQuote": true,
+    "proseWrap": "preserve"
   },
   "test": {
-    "files": {
-      "include": [
-        "src/"
-      ]
-    }
+    "include": [
+      "src/"
+    ]
   },
   "tasks": {
     "clean": "curl -fsSL https://raw.githubusercontent.com/akiraohgaki/helper-script/main/remkdir.sh | sh -s -- public 'src/*.html src/*.ico src/*.png src/assets'",
