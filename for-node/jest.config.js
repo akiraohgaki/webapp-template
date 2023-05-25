@@ -2,8 +2,10 @@ export default {
   testEnvironment: 'jsdom',
   roots: ['<rootDir>/src'],
   testMatch: ['**/__tests__/**/*.+(ts|tsx|js)', '**/?(*.)+(spec|test).+(ts|tsx|js)'],
+  //preset: 'ts-jest/presets/default-esm',
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
+    //'^.+\\.(ts|tsx)$': ['ts-jest', { useESM: true }],
+    '^.+\\.(ts|tsx)$': 'ts-jest'
   },
   moduleNameMapper: {
     '(.+)\\.js$': '$1',
