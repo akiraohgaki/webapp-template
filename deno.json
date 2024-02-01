@@ -1,5 +1,4 @@
 {
-  "importMap": "import_map.json",
   "compilerOptions": {
     "lib": [
       "deno.ns",
@@ -38,6 +37,7 @@
     "useTabs": false,
     "lineWidth": 120,
     "indentWidth": 2,
+    "semiColons": true,
     "singleQuote": true,
     "proseWrap": "preserve"
   },
@@ -50,5 +50,8 @@
     "clean": "curl -fsSL https://raw.githubusercontent.com/akiraohgaki/helper-script/main/remkdir.sh | sh -s -- public 'src/*.html src/*.ico src/*.png src/assets'",
     "bundle": "deno run --allow-env --allow-read --allow-write --allow-net https://raw.githubusercontent.com/akiraohgaki/helper-script/main/deno-bundle.ts src/main.ts public/main.bundle.js",
     "build": "deno task clean && deno fmt && deno lint && deno test && deno task bundle"
+  },
+  "imports": {
+    "std/": "https://deno.land/std/"
   }
 }
