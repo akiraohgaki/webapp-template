@@ -17,9 +17,9 @@
     "clean": "rm -rf dist",
     "fmt": "echo 'Skip code formatting'",
     "lint": "tsc --noEmit && eslint --ext '.ts,.tsx,.js' src",
-    "test": "NODE_OPTIONS='--experimental-vm-modules' jest --ci --runInBand --passWithNoTests",
     "bundle": "tsc && esbuild dist/main.js --outfile=public/main.bundle.js --bundle --minify",
-    "build": "npm run clean && npm run fmt && npm run lint && npm run test && npm run bundle"
+    "build": "npm run clean && npm run fmt && npm run lint && npm run bundle",
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest --ci --runInBand --passWithNoTests"
   },
   "devDependencies": {
     "@testing-library/react": "*",
