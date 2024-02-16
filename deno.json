@@ -52,7 +52,7 @@
   },
   "tasks": {
     "clean": "curl -fsSL https://raw.githubusercontent.com/akiraohgaki/helper-script/main/remkdir.sh | sh -s -- public 'src/*.html src/*.ico src/*.png src/assets'",
-    "bundle": "deno run --allow-env --allow-read --allow-write --allow-net https://raw.githubusercontent.com/akiraohgaki/helper-script/main/deno-bundle.ts src/mod.ts public/mod.bundle.js",
+    "bundle": "deno run --allow-env --allow-read --allow-write --allow-net https://raw.githubusercontent.com/akiraohgaki/helper-script/main/deno-bundle.ts src/main.ts public/main.bundle.js",
     "build": "deno task clean && deno fmt && deno lint && deno task bundle",
     "test": "deno test && deno task test:e2e",
     "test:e2e": "echo 'Skip task: test:e2e'"
