@@ -14,11 +14,12 @@
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
   "scripts": {
-    "clean": "rm -rf dist",
-    "fmt": "echo 'Skip code formatting'",
+    "fmt": "echo 'Skip task fmt'",
     "lint": "tsc --noEmit && eslint --ext '.ts,.tsx,.js' src",
-    "bundle": "tsc && esbuild dist/main.js --outfile=public/main.bundle.js --bundle --minify",
-    "build": "npm run clean && npm run fmt && npm run lint && npm run bundle",
+    "build": "npm run fmt && npm run lint && npm run build:setup && npm run build:bundle && npm run build:teardown",
+    "build:setup": "rm -rf dist",
+    "build:bundle": "tsc && esbuild dist/main.js --outfile=public/main.bundle.js --bundle --minify",
+    "build:teardown": "echo 'Skip task build:teardown'",
     "test": "NODE_OPTIONS='--experimental-vm-modules' jest --ci --runInBand --passWithNoTests"
   },
   "devDependencies": {
