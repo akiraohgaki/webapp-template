@@ -16,11 +16,17 @@
   "scripts": {
     "fmt": "echo 'Skip task fmt'",
     "lint": "tsc --noEmit && eslint --ext '.ts,.tsx,.js' src",
-    "build": "npm run fmt && npm run lint && npm run build:setup && npm run build:bundle && npm run build:teardown",
+    "build": "npm run build:setup && npm run build:fix && npm run build:bundle && npm run build:teardown",
     "build:setup": "rm -rf dist",
+    "build:fix": "npm run fmt && npm run lint",
     "build:bundle": "tsc && esbuild dist/main.js --outfile=public/main.bundle.js --bundle --minify",
     "build:teardown": "echo 'Skip task build:teardown'",
-    "test": "NODE_OPTIONS='--experimental-vm-modules' jest --ci --runInBand --passWithNoTests"
+    "test": "npm run test:setup && npm run test:unit && npm run test:e2e && npm run test:teardown",
+    "test:setup": "echo 'Skip task test:setup'",
+    "test:unit": "NODE_OPTIONS='--experimental-vm-modules' jest --ci --runInBand --passWithNoTests",
+    "test:e2e": "echo 'Skip task test:e2e'",
+    "test:teardown": "echo 'Skip task test:teardown'",
+    "serve": "echo 'Skip task serve'"
   },
   "devDependencies": {
     "@testing-library/react": "*",
