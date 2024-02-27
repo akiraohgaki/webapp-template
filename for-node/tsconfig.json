@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
+    "target": "ESNext",
     "lib": [
       "ESNext",
       "DOM",
@@ -18,7 +18,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true
     "outDir": "dist",
     "typeRoots": [
       "node_modules/@types",
