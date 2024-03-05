@@ -15,7 +15,7 @@
   "types": "dist/main.d.ts",
   "scripts": {
     "fmt": "echo 'Skip task fmt'",
-    "lint": "tsc --noEmit && eslint --ext '.ts,.tsx,.js' src",
+    "lint": "tsc --noEmit && eslint --ext .ts,.tsx,.js src",
     "build": "npm run build:setup && npm run build:fix && npm run build:bundle && npm run build:teardown",
     "build:setup": "rm -rf dist",
     "build:fix": "npm run fmt && npm run lint",
