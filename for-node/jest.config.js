@@ -1,8 +1,8 @@
 export default {
   testEnvironment: 'jsdom',
   roots: ['<rootDir>/tests'],
-  testMatch: ['**/__tests__/**/*.+(ts|tsx|js)', '**/?(*.)+(spec|test).+(ts|tsx|js)'],
   //preset: 'ts-jest/presets/default-esm',
+  testMatch: ['**/__tests__/**/*.(ts|tsx|js|jsx)', '**/?(*.)+(spec|test).(ts|tsx|js|jsx)'],
   transform: {
     //'^.+\\.(ts|tsx)$': ['ts-jest', { useESM: true }],
     '^.+\\.(ts|tsx)$': 'ts-jest'
