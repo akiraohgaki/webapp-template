@@ -5,7 +5,7 @@ export default {
   testMatch: ['**/__tests__/**/*.(ts|tsx|js|jsx)', '**/?(*.)+(spec|test).(ts|tsx|js|jsx)'],
   transform: {
     //'^.+\\.(ts|tsx)$': ['ts-jest', { useESM: true }],
-    '^.+\\.(ts|tsx)$': 'ts-jest'
+    '^.+\\.(ts|tsx)$': 'ts-jest',
   },
   moduleNameMapper: {
     '(.+)\\.(ts|tsx|js|jsx)$': '$1',
