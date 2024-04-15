@@ -8,7 +8,7 @@ export default {
     '^.+\\.(ts|tsx)$': 'ts-jest'
   },
   moduleNameMapper: {
-    '(.+)\\.js$': '$1',
+    '(.+)\\.(ts|tsx|js|jsx)$': '$1',
   },
   reporters: [
     'default',
