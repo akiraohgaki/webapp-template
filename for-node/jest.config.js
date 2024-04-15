@@ -21,7 +21,7 @@ export default {
     ],
   ],
   collectCoverage: true,
-  collectCoverageFrom: ['src/**/*.{ts,tsx,js}'],
+  collectCoverageFrom: ['src/**/*.{ts,tsx,js,jsx}'],
   coverageDirectory: 'coverage',
   coverageReporters: ['html', 'cobertura'],
 };
