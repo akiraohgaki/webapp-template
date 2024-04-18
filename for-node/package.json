@@ -28,8 +28,8 @@
     "serve": "echo 'Skip task serve'"
   },
   "devDependencies": {
+    "@jest/globals": "*",
     "@testing-library/react": "*",
-    "@types/jest": "*",
     "@types/react": "*",
     "@types/react-dom": "*",
     "@typescript-eslint/eslint-plugin": "*",
