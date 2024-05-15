@@ -1,4 +1,4 @@
-import { assertStrictEquals } from 'std/assert/mod.ts';
+import { assertStrictEquals } from '@std/assert';
 
 Deno.test('Test', async (t) => {
   await t.step('test', () => {

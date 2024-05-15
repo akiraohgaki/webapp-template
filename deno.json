@@ -61,9 +61,9 @@
     "test:unit": "deno test tests/unit/",
     "test:e2e": "echo 'Skip task test:e2e'",
     "test:teardown": "echo 'Skip task test:teardown'",
-    "serve": "deno run --allow-read --allow-net https://deno.land/std/http/file_server.ts public -p 3000"
+    "serve": "deno run --allow-sys --allow-read --allow-net jsr:@std/http/file-server public -p 3000"
   },
   "imports": {
-    "std/": "https://deno.land/std/"
+    "@std/assert": "jsr:@std/assert"
   }
 }
