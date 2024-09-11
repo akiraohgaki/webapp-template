@@ -1,7 +1,12 @@
-import { assertStrictEquals } from '@std/assert';
+import { assertEquals, assertStrictEquals } from '@std/assert';
 
 Deno.test('Test', async (t) => {
   await t.step('test', () => {
-    assertStrictEquals(1 + 2, 3);
+    const a = {};
+    const b = a;
+
+    assertEquals(a, {});
+
+    assertStrictEquals(a, b);
   });
 });
