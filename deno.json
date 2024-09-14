@@ -52,16 +52,17 @@
     ]
   },
   "tasks": {
+    "check": "deno fmt && deno lint && deno check src/main.ts",
     "build": "deno task build:setup && deno task build:bundle && deno task build:teardown",
     "build:setup": "curl -fsSL https://raw.githubusercontent.com/akiraohgaki/helper-script/main/remkdir.sh | sh -s -- public 'src/*.html src/*.ico src/*.png src/assets'",
-    "build:bundle": "deno run --allow-env --allow-read --allow-write --allow-net https://raw.githubusercontent.com/akiraohgaki/helper-script/main/deno-bundle.ts --minify=true src/main.ts public/main.bundle.js",
+    "build:bundle": "deno run -A https://raw.githubusercontent.com/akiraohgaki/helper-script/main/deno-bundle.ts --minify=true src/main.ts public/main.bundle.js",
     "build:teardown": "echo 'Skip task build:teardown'",
     "test": "deno task test:setup && deno task test:unit && deno task test:e2e && deno task test:teardown",
     "test:setup": "echo 'Skip task test:setup'",
     "test:unit": "deno test tests/unit/",
     "test:e2e": "echo 'Skip task test:e2e'",
     "test:teardown": "echo 'Skip task test:teardown'",
-    "serve": "deno run --allow-env --allow-read --allow-write --allow-net jsr:@akiraohgaki/devsrv/server ./src"
+    "serve": "deno run -A jsr:@akiraohgaki/devsrv/server src"
   },
   "imports": {
     "@std/assert": "jsr:@std/assert"
