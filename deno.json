@@ -54,7 +54,7 @@
   "tasks": {
     "check": "deno fmt && deno lint && deno check src/main.ts",
     "build": "deno task build:setup && deno task build:bundle && deno task build:teardown",
-    "build:setup": "deno run -A jsr:@akiraohgaki/devsrv/remkdir --includes='src/index.html, src/favicon.ico, src/icon.png src/assets' public",
+    "build:setup": "deno run -A jsr:@akiraohgaki/devsrv/remkdir --includes='src/index.html, src/assets' public",
     "build:bundle": "deno run -A jsr:@akiraohgaki/devsrv/bundle --minify=true src/main.ts public/main.bundle.js",
     "build:teardown": "echo 'Skip task build:teardown'",
     "test": "deno task test:setup && deno task test:unit && deno task test:e2e && deno task test:teardown",
