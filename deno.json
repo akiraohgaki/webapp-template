@@ -37,6 +37,7 @@
       "src/",
       "tests/",
       "*.ts",
+      "*.json",
       "*.md"
     ],
     "useTabs": false,
