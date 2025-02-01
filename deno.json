@@ -70,7 +70,8 @@
   },
   "imports": {
     "@playwright/test": "npm:@playwright/test",
-    "@std/assert": "jsr:@std/assert"
+    "@std/assert": "jsr:@std/assert",
+    "@types/node": "npm:@types/node"
   },
   "nodeModulesDir": "auto"
 }
