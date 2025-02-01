@@ -1,6 +1,6 @@
 import { assertEquals } from '@std/assert';
 
-import Counter from '../../src/Counter.ts';
+import { Counter } from '../../src/Counter.ts';
 
 Deno.test('Counter', async (t) => {
   await t.step('constructor', () => {

@@ -1,4 +1,4 @@
-export default class Counter {
+export class Counter {
   #value = 0;
 
   constructor(initialValue: number = 0) {

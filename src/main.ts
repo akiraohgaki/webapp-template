@@ -1,4 +1,4 @@
-import Counter from './Counter.ts';
+import { Counter } from './Counter.ts';
 
 const counter = new Counter();
 
