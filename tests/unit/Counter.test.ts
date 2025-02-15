@@ -3,7 +3,7 @@ import { assertEquals } from '@std/assert';
 import { Counter } from '../../src/Counter.ts';
 
 Deno.test('Counter', async (t) => {
-  await t.step('constructor', () => {
+  await t.step('constructor()', () => {
     const counterA = new Counter();
     const counterB = new Counter(123);
 
@@ -11,14 +11,14 @@ Deno.test('Counter', async (t) => {
     assertEquals(counterB.value, 123);
   });
 
-  await t.step('increment', () => {
+  await t.step('increment()', () => {
     const counter = new Counter();
     counter.increment();
 
     assertEquals(counter.value, 1);
   });
 
-  await t.step('decrement', () => {
+  await t.step('decrement()', () => {
     const counter = new Counter();
     counter.decrement();
 
