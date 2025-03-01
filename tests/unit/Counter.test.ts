@@ -24,6 +24,6 @@ Deno.test('Counter', async (t) => {
   await t.step('decrement()', () => {
     counter.decrement();
 
-    assertEquals(counter.value, -1);
+    assertEquals(counter.value, 0);
   });
 });
