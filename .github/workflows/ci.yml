@@ -14,9 +14,9 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - uses: denoland/setup-deno@v1
+      - uses: denoland/setup-deno@v2
         with:
           deno-version: vx.x.x
 
@@ -29,16 +29,16 @@ jobs:
     needs: check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - uses: denoland/setup-deno@v1
+      - uses: denoland/setup-deno@v2
         with:
           deno-version: vx.x.x
 
       - name: Build
         run: deno task build
 
-      #- uses: actions/upload-artifact@v4
+      #- uses: actions/upload-artifact@v6
       #  with:
       #    name: public
       #    path: public/
@@ -49,16 +49,16 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - uses: denoland/setup-deno@v1
+      - uses: denoland/setup-deno@v2
         with:
           deno-version: vx.x.x
 
       - name: Test
         run: deno task test
 
-      #- uses: actions/upload-artifact@v4
+      #- uses: actions/upload-artifact@v6
       #  if: ${{ !cancelled() }}
       #  with:
       #    name: test-report
@@ -71,16 +71,14 @@ jobs:
   #  needs: test
   #  runs-on: ubuntu-latest
   #  steps:
-  #    - uses: actions/download-artifact@v4
+  #    - uses: actions/download-artifact@v6
   #      with:
   #        name: public
   #        path: public
   #
-  #    - uses: cloudflare/pages-action@v1
+  #    - uses: cloudflare/wrangler-action@v3
   #      with:
   #        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
   #        accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-  #        projectName: ${{ secrets.CLOUDFLARE_PAGES_PROJECT_NAME }}
-  #        directory: public
-  #        branch: ${{ github.ref_name }}
+  #        command: pages deploy public --project-name=${{ secrets.CLOUDFLARE_PAGES_PROJECT_NAME }}
   #        gitHubToken: ${{ secrets.GITHUB_TOKEN }}
