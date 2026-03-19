@@ -54,7 +54,7 @@
   },
   "tasks": {
     "install": "deno task install:pre && deno task install:install && deno task install:post",
-    "install:pre": "Skip task install:pre'",
+    "install:pre": "echo 'Skip task install:pre'",
     "install:install": "deno install",
     "install:post": "deno run -A npm:playwright install --with-deps",
     "check": "deno task check:pre && deno task check:check && deno task check:post",
