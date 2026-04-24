@@ -6,10 +6,10 @@ test.describe('Counter', () => {
   });
 
   test('Counter button', async ({ page }) => {
-    await expect(page.locator('button')).toHaveText('Click me');
+    const button = page.getByRole('button', { name: 'Click me' });
 
-    await page.locator('button').click();
+    await button.click();
 
-    await expect(page.locator('button')).toHaveText('1 Clicked');
+    await expect(button).toHaveText('1 Clicked');
   });
 });
