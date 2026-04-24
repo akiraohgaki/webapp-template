@@ -6,7 +6,7 @@ test.describe('Counter', () => {
   });
 
   test('Counter button', async ({ page }) => {
-    await expect(page.locator('button')).toHaveText('Click me!');
+    await expect(page.locator('button')).toHaveText('Click me');
 
     await page.locator('button').click();
 
